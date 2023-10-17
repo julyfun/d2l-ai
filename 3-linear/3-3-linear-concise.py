@@ -29,6 +29,7 @@ net[0].bias.data.fill_(0)
 loss = nn.MSELoss()
 
 # 小批量随机梯度下降算法
+# trainer 获得 net 参数的引用，来训练
 trainer: torch.optim.SGD = torch.optim.SGD(net.parameters(), lr=0.03)
 
 # [3.3.7 训练]
